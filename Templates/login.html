@@ -17,12 +17,17 @@
 </head>
 <body class="bg-gray-100 h-screen flex items-center justify-center">
     <!-- Contenedor principal de la página de login -->
-    <!-- Se ha eliminado 'max-w-7xl' para permitir que ocupe el 100% del ancho disponible -->
     <div class="flex w-full h-full bg-white shadow-lg rounded-lg overflow-hidden md:flex-row flex-col">
 
-        <!-- Sección izquierda para futuras integraciones. Ahora ocupa su espacio completo y siempre es visible. -->
-        <div class="w-full md:w-1/2 bg-white flex items-center justify-center p-8">
-            <!-- Este espacio está ahora vacío y listo para tu imagen. -->
+        <!-- Sección izquierda para la imagen de fondo -->
+        <!-- La imagen se centrará y cubrirá el espacio, siendo responsive. -->
+        <div class="w-full md:w-1/2 bg-white flex items-center justify-center p-0 relative overflow-hidden">
+            <!-- Aquí se inserta la imagen alusiva a instituciones educativas -->
+            <!-- NOTA: Reemplaza esta URL de placeholder con la ruta relativa de tu imagen real. -->
+            <!-- Por ejemplo: <img src="/Templates/src/images/imagen-estudiantes.jpg" -->
+            <img src="/Templates/src/images/imagen-estudiantes.jpg"
+                 alt="Imagen alusiva a instituciones educativas"
+                 class="w-full h-full object-cover">
         </div>
 
         <!-- Sección derecha para el formulario de login (50% del ancho en escritorio) -->
@@ -56,7 +61,7 @@
                         <!-- Campo de contraseña con el botón para visualizar/ocultar -->
                         <div>
                             <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
-                            <div class="relative mt-1"> <!-- Este div es ahora el contenedor relativo para el input y el botón -->
+                            <div class="relative mt-1">
                                 <input type="password" id="password" name="password" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm pr-10" placeholder="••••••••">
                                 <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                                     <!-- Icono de ojo (SVG) para mostrar/ocultar contraseña -->
@@ -93,4 +98,4 @@
     <!-- Enlace a nuestro archivo JavaScript para la lógica del formulario -->
     <script src="/Templates/script/scrip.js"></script>
 </body>
-</html> 
+</html>
