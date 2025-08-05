@@ -1,85 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Iniciar Sesión</title>
-    <!-- Carga de Tailwind CSS CDN para estilos responsive -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Enlace a nuestro archivo de estilos CSS personalizado -->
-    <link rel="stylesheet" href="Styles/styles.css">
-    <!-- Configuración de la fuente Inter -->
+    <!-- Fuente Inter desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-100 h-screen flex items-center justify-center">
-    <!-- Contenedor principal de la página de login -->
-    <div class="flex w-full h-full bg-white shadow-lg rounded-lg overflow-hidden md:flex-row flex-col">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="flex flex-wrap w-full max-w-7xl bg-white shadow-lg rounded-lg overflow-hidden md:flex-nowrap">
+        <!-- Sección izquierda -->
+        <div class="relative w-full md:w-1/2 text-white flex flex-col justify-center p-8 overflow-hidden min-h-[320px] md:min-h-auto">
+            <img src="src/images/imagen-estudiantes.jpg" alt="Imagen alusiva a instituciones educativas"
+                class="absolute inset-0 w-full h-full object-cover z-0" />
+            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
 
-        <!-- Sección izquierda para la imagen de fondo -->
-        <!-- La imagen se centrará y cubrirá el espacio, siendo responsive. -->
-        <div class="w-full md:w-1/2 bg-white flex items-center justify-center p-0 relative overflow-hidden">
-            <!-- Aquí se inserta la imagen alusiva a instituciones educativas -->
-            <!-- NOTA: Reemplaza esta URL de placeholder con la ruta relativa de tu imagen real. -->
-            <!-- Por ejemplo: <img src="/Templates/src/images/imagen-estudiantes.jpg" -->
-            <img src="/Templates/src/images/imagen-estudiantes.jpg"
-                 alt="Imagen alusiva a instituciones educativas"
-                 class="w-full h-full object-cover">
-        </div>
-
-        <!-- Sección derecha para el formulario de login (50% del ancho en escritorio) -->
-        <div class="w-full md:w-1/2 flex items-center justify-center p-8 bg-blue-100">
-            <div class="w-full max-w-md">
-                <!-- Placeholder para el logo o escudo -->
-                <div class="flex justify-center mb-4">
-                    <img src="/Templates/src/images/istockphoto-1156307040-612x612.jpg" alt="Logo de la empresa" class="h-24 w-24 rounded-full shadow-md">
+            <div class="relative z-20 max-w-md mx-auto md:mx-0">
+                <div class="flex items-center mb-6">
+                    <div class="bg-white/50 p-2 rounded-full mr-3 shadow-md">
+                        <img src="src/images/logo.png" alt="Logo Grancole Pro" class="w-8 h-8" />
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold">Grancole Pro</span>
+                        <p class="text-sm text-gray-200">Sistema de Gestión Educativa</p>
+                    </div>
                 </div>
 
-                <!-- Nuevo título "Bienvenido a GranCole" debajo del logo -->
-                <h2 class="text-2xl font-semibold text-center text-gray-700 mb-2">Bienvenido a GranCole</h2>
-                <!-- Nuevo mensaje "Inicia sesión para continuar" -->
-                <p class="text-gray-600 text-center mb-6">Inicia sesión para continuar</p>
+                <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
+                    Gestiona tu institución educativa de manera inteligente
+                </h1>
+                <p class="text-md md:text-lg mb-6">
+                    Plataforma integral para administrar estudiantes, profesores, calificaciones, asistencia y mucho más en un solo lugar.
+                </p>
 
-                <!-- Nueva caja que envuelve el formulario y elementos relacionados -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <!-- Título "Iniciar Sesión" alineado a la izquierda -->
-                    <h2 class="text-3xl font-bold text-left text-gray-800 mb-2">Iniciar Sesión</h2>
-                    <!-- Nuevo mensaje debajo del título -->
-                    <p class="text-gray-600 text-left mb-6">Ingresa tus credenciales para acceder al sistema</p>
+                <ul class="space-y-3 mb-8 text-sm md:text-base">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Gestión completa de estudiantes y profesores
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Sistema de calificaciones y boletines
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Control de asistencia en tiempo real
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Comunicación integrada y foros
+                    </li>
+                </ul>
 
-                    <!-- Formulario de login -->
-                    <form id="loginForm" class="space-y-6">
+                <div class="flex justify-between items-center w-full mt-8 text-center text-gray-200 text-sm md:text-base">
+                    <div>
+                        <span class="text-2xl md:text-3xl font-bold">1,234+</span>
+                        <p>Estudiantes</p>
+                    </div>
+                    <div>
+                        <span class="text-2xl md:text-3xl font-bold">45+</span>
+                        <p>Cursos</p>
+                    </div>
+                    <div>
+                        <span class="text-2xl md:text-3xl font-bold">98%</span>
+                        <p>Certificaciones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección derecha -->
+        <div class="w-full md:w-1/2 flex items-center justify-center p-8 bg-blue-100">
+            <div class="w-full max-w-md">
+                <div class="flex justify-center mb-4">
+                    <img src="/Templates/src/images/istockphoto-1156307040-612x612.jpg" alt="Logo de la empresa"
+                        class="h-20 w-20 md:h-24 md:w-24 rounded-full shadow-md object-cover" />
+                </div>
+
+                <h2 class="text-xl md:text-2xl font-semibold text-center text-gray-700 mb-2">Bienvenido a GranCole</h2>
+                <p class="text-gray-600 text-center mb-6 text-sm md:text-base">Inicia sesión para continuar</p>
+
+                <div class="bg-white p-6 md:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl md:text-3xl font-bold text-left text-gray-800 mb-2">Iniciar Sesión</h2>
+                    <p class="text-gray-600 text-left mb-6 text-sm md:text-base">Ingresa tus credenciales para acceder al sistema</p>
+
+                    <form id="loginForm" class="space-y-6" novalidate>
                         <div>
                             <label for="username" class="block text-sm font-medium text-gray-700">Usuario o Correo Electrónico</label>
-                            <input type="text" id="username" name="username" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="ej. usuario@ejemplo.com">
+                            <input type="text" id="username" name="username"
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                placeholder="ej. usuario@ejemplo.com" />
                             <p id="usernameError" class="text-red-500 text-xs mt-1 hidden">El usuario es requerido.</p>
                         </div>
 
-                        <!-- Campo de contraseña con el botón para visualizar/ocultar -->
                         <div>
                             <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
                             <div class="relative mt-1">
-                                <input type="password" id="password" name="password" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm pr-10" placeholder="••••••••">
-                                <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
-                                    <!-- Icono de ojo (SVG) para mostrar/ocultar contraseña -->
+                                <input type="password" id="password" name="password"
+                                    class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm pr-10"
+                                    placeholder="••••••••" />
+                                <button type="button" id="togglePassword"
+                                    class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                                     <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path id="eyeIconOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path id="eyeIconClosed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        <path id="eyeIconOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path id="eyeIconClosed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                     </svg>
                                 </button>
                             </div>
                             <p id="passwordError" class="text-red-500 text-xs mt-1 hidden">La contraseña es requerida.</p>
-                            <!-- Enlace "¿Olvidaste tu contraseña?" alineado a la derecha -->
                             <div class="text-right mt-2">
                                 <a href="#" class="text-sm text-blue-600 hover:text-blue-500">¿Olvidaste tu contraseña?</a>
                             </div>
                         </div>
 
                         <div>
-                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            <button type="submit"
+                                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
                                 Iniciar Sesión
                             </button>
                         </div>
@@ -88,14 +149,13 @@
                     <div class="mt-6 text-center text-sm text-gray-600">
                         ¿No tienes cuenta? <a href="#" class="text-blue-600 hover:text-blue-500">Contacta al administrador</a>
                     </div>
-                    <!-- Nuevo mensaje de copyright -->
                     <p class="text-center text-xs text-gray-500 mt-4">© GranCole Pro. Todos los derechos reservados</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Enlace a nuestro archivo JavaScript para la lógica del formulario -->
+    <!-- Script -->
     <script src="/Templates/script/scrip.js"></script>
 </body>
 </html>
