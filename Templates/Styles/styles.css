@@ -1,0 +1,19 @@
+/*
+  Este archivo CSS se utiliza para estilos personalizados que no son cubiertos
+  directamente por Tailwind CSS o para sobrescribir sus utilidades.
+  Para este formulario, la mayoría del estilo se maneja con clases de Tailwind.
+*/
+
+/* body {
+    background-color: #f0f2f5;
+} */
+
+/* .custom-card {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* .input-field:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+} */
